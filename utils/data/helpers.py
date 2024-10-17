@@ -140,7 +140,7 @@ def preprocess(root, size=(64, 64), img_format="JPEG", center_crop=None):
         width, height = img.size
 
         if size is not None and width != size[1] or height != size[0]:
-            img = img.resize(size, Image.ANTIALIAS)
+            img = img.resize(size, Image.LANCZOS)
 
         if center_crop is not None:
             new_width, new_height = center_crop
